@@ -1,0 +1,1 @@
+If you like, you can compile Ajar.exe and Ajar.app with these files (the Win32 folder is for something else)_Ajar.exe_Ajar.devmain.cppAjar.ico_Ajar.app_applet.scptapplet.icns

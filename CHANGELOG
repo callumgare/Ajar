@@ -1,0 +1,33 @@
+Ajar – Blaise Roth
+Since November 1st 2009
+
+Ajar is going to come a long way from now until it's finished. All notable changes will be recorded here. This log will not be included with the finished version of the game.
+
+* 0.0.1 - 26 Jul 2010
+	- Started fresh with new design
+
+* 0.1.2.4 – March 2010 – (Most bugs fixed, other major upgrades)
+* 0.1.2.3 - ? 2010
+* 0.1.2.2 - ? 2010
+* 0.1.2.1 - ? 2010
+	- Fixed several minor bugs
+	- Added modules with game – self-installation
+	- Removed "win.pl" and "unix.pl" – "ajar.plx" for everything
+	- Fixed "new" and "clear" – should work with every OS
+	- Added cutting minigame – mostly perfected
+	- Added more new content
+	- Moved ajar.plx to main folder and rename to "ajar"
+	- Added higher resolution icons to Ajar icon
+	- Added Ajar.app for Mac OS X execution
+
+* 0.1.2 – 14 Feb 2010 – (Another rushed release to few people)
+	- Added Ajar.exe
+	- Fixed module installing – in 2 parts
+	- Fixed "use mobile phone" bugs
+	- Added Alias command
+	- Fixed "new" bugs – mostly
+
+* 0.1.1 26 Jan 2010 – (Corrected most bugs and released to several people)
+	- Fixed minor game-breaking bugs
+
+* 0.1.0 - 24 Jan 2010 – (Rushed, buggy release to 1 person only)

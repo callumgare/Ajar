@@ -1,0 +1,9 @@
+Ajar - Blaise Roth
+
+1. Proper hash referencing system instead of symbolic refs (except for subs)
+2. OO actions/commands:
+	a) Inheritance
+	b) Proper redo sub
+	c) Recursive and flexible design
+3. Alternate path with paperclip and mobile phone
+4. Some sounds

@@ -1,0 +1,50 @@
+Ajar - Blaise Roth
+
+Firstly, thank you for downloading Ajar; I hope your experience with it is enjoyable. This is an Alpha or Pre-Beta release of the game; I am relying on the players (you!) to help finish and improve the game.
+
+--WINDOWS INSTALL--
+Ajar is a Perl game, you will need Perl in order to play.
+
+1. If you think you have Perl already, run cmd and enter "perl -v" (sans the quotes). (Start > Run > cmd > OK > perl –v  > Enter)
+2. If not, or it's not version 5*, download Strawberry Perl version 5 from www.strawberryperl.com
+3. Install it. As long as you leave the installation default, everything should be fine
+4. Run Ajar.exe. Let the modules install when it asks you.
+5. Enjoy (optional)
+
+* Version must be higher than 5.6.1 but lower than 6.0.0
+
+Get in contact with me if you have any problems. Contact details at bottom of readme
+
+--LINUX/MAC OS X INSTALL--
+Ajar is a Perl game, you will need Perl in order to play. Luckily though, you should already have it.
+
+1. Run your Terminal program and enter "perl -v" (sans the quotes)
+2. If Perl is not version 5*, download and install it from www.perl.org/get.html (standard Perl, not ActivePerl or Strawberry Perl)
+3. From the Terminal options menu, change the background colour to black and ensure the window is wide enough to display 80 characters.
+5. (Mac OS X only:) Place the Ajar folder in /Applications. Run Ajar.app. If it doesn’t work, read on
+6. "cd" to your Ajar folder with Terminal (type "cd " (note the trailing space) and drag the Ajar folder onto the window, if you like)
+7. "./ajar" and Ajar should run
+8. If it complains about file permissions, type "chmod +x ajar" and try the previous step again
+9. If that doesn't work, try "perl ajar"
+
+* Version must be higher than 5.6.1 but lower than 6.0.0
+
+The downside is that Linux/Mac OS X users don't get sound. Use a Windows system if you really want sound.
+Get in contact with me if you have any problems. Contact details at bottom of readme
+
+--HOW TO PLAY--
+Everything is explained in-game. Type "help" (sans the quotes) to get started.
+If multiple people are playing the game, there is multiple profile support (sort of). Rename the save folder found in Ajar/source to something else. The game will create a new one when it needs to save after that. To use a "profile" again, rename the current save folder to something else and rename the desired profile to "save".
+If you are stuck, I can supply hints if you contact me. Contact details at bottom of readme. I don't want spoilers for everyone to see, which is why you send the details privately (Email or PM).
+Yes, the game IS completely open source... it's compiled at run-time. So you could try to read the source if you are stuck. This could easily spoil a lot of the game for you, so I don't recommend it.
+
+--PERMISSIONS--
+This game is open source (at least for the time being. It is undecided if it will always be this way). You don't have to look much further than the source folder to see the inner-workings of the game.
+I give you full permission to edit the game (in fact, I encourage it). You should tell me before you share your edits anywhere. You may also make a completely new game with the "engine" of this game, as long as you credit me somewhere in the game or readme. Again, it would be nice if you contacted me before sharing it anywhere. Contact details below.
+
+--CONTACT DETAILS--
+Email: blaiseroth@gmail.com
+Username on TIGSource Forums: Blaizer
+Username on FTO Forums: Blaizer
+
+Comments, feedback, suggestions, ideas, and bug-reports are all greatly appreciated.

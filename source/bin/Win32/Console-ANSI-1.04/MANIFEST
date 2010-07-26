@@ -1,0 +1,10 @@
+ANSI.xs
+Changes
+typemap
+Makefile.PL
+MANIFEST
+ppport.h
+README
+LICENCE
+lib/Win32/Console/ANSI.pm
+META.yml
