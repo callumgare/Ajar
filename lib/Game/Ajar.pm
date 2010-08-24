@@ -1,11 +1,13 @@
 #!/usr/bin/env perl
+package Game::Ajar;
 use 5.010;
+our $VERSION = 0.001;
 unless($^O eq "MSWin32" and $ARGV[0] ne "-winexe") { #don't if running from windows without exe
 	$SIG{INT} = "sigint"; #disable Ctrl+C
 	sub sigint{}
 }
 
-use File::Share::Dir;
+use File::Share::Dir();
 
 our (%M, %H) = (
 	state => {
@@ -14,7 +16,11 @@ our (%M, %H) = (
 		character_count => 0,
 	},
 	msgnum => {},
+	dir => File::Share::Dir::dist_dir("Game-Ajar");
 );
+
+package main;
+
 use Game::Ajar::Hashes;
 use Game::Ajar::OtherHashes;
 use Game::Ajar::Subs;

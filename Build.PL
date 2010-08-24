@@ -12,8 +12,8 @@ my $build = Module::Build->new(
 		'Test::More'     => 0,
 		'File::ShareDir' => 0,
 		$^O eq "MSWin32" ? (
-		'Win32::Console::ANSI',
-		'Win32::Sound',
+			'Win32::Console::ANSI' => 1.04,
+			'Win32::Sound'         => 0.49,
 		) : (),
 	},
 	recommends => {
