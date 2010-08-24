@@ -11,6 +11,10 @@ my $build = Module::Build->new(
 		'perl'           => 5.010,
 		'Test::More'     => 0,
 		'File::ShareDir' => 0,
+		$^O eq "MSWin32" ? (
+		'Win32::Console::ANSI',
+		'Win32::Sound',
+		) : (),
 	},
 	recommends => {
 		'Test::Pod'           => 1.22,

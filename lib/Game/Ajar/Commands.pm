@@ -187,7 +187,7 @@ sub load {
 								elsif($hash eq 'state') {
 									%state = (@parts);
 								}
-								elsif(defined %{"lock_$hash"}) {
+								elsif(%{"lock_$hash"}) {
 									%{$hash} = %{"start_$hash"}; #back to default
 									for(@parts) {
 										if(${"lock_$hash"}{$_}) {

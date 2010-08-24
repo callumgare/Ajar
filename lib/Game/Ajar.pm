@@ -1,12 +1,11 @@
 #!/usr/bin/env perl
 use 5.010;
-use strict;
-use Text::Wrap qw($columns $unexpand $tabstop);
-($columns, $unexpand, $tabstop) = (80, 0, 4);
 unless($^O eq "MSWin32" and $ARGV[0] ne "-winexe") { #don't if running from windows without exe
 	$SIG{INT} = "sigint"; #disable Ctrl+C
 	sub sigint{}
 }
+
+use File::Share::Dir;
 
 our (%M, %H) = (
 	state => {
@@ -16,9 +15,21 @@ our (%M, %H) = (
 	},
 	msgnum => {},
 );
-chdir "source" or die "Ajar/source: $!";
-require while <data/*.ph>; # .ph first
-require while <data/*.pl>; # then .pl
+use Game::Ajar::Hashes;
+use Game::Ajar::OtherHashes;
+use Game::Ajar::Subs;
+use Game::Ajar::Actions;
+use Game::Ajar::Commands;
+use Game::Ajar::Combine;
+use Game::Ajar::Combine::IfTree;
+use Game::Ajar::Look::IfTree;
+use Game::Ajar::Reach;
+use Game::Ajar::Reach::IfTree;
+use Game::Ajar::Separate;
+use Game::Ajar::Separate::IfTree;
+use Game::Ajar::Use;
+use Game::Ajar::Use::Actions;
+use Game::Ajar::Use::IfTree;
 
 clear_0();
 
@@ -28,45 +39,9 @@ if($^O eq "MSWin32") { #Colour and sound for Windows
 		require Win32::Sound;
 	};
 	if($@) { #Missing module(s)
-		if(($make) = `perl -V:make` =~ /make='(.*)'/) {
-			print "The modules for colour and/or sound don't seem to be installed.\n Q: Do you want to install them now with \"$make\"?\n";
-			if(yes("no_color")) {
-				print "\nPlease wait while the modules install . . .\n";
-				chdir "bin/Win32/Console-ANSI-1.04" or die "Ajar/source/bin/Win32/Console-ANSI-1.04: $!";
-				system "perl Makefile.PL";
-				system "$make";
-				system "$make install";
-				require Win32::Console::ANSI;
-				chdir "../Sound-0.49" or die "Ajar/source/bin/Win32/Sound-0.49: $!";
-				system "perl Makefile.PL";
-				system "$make";
-				system "$make install";
-				require Win32::Sound;
-				chdir "../../.." or die "Ajar/source: $!";
-				print "\nModules installed successfully!\n"; #no death, so successful
-				system "pause && cls";
-			}
-			else {
-				print "
-Win32::Console::ANSI and Win32::Sound must be installed to play Ajar on
-Windows. They are located in Ajar/source/bin/Win32 if you want to install them
-manually. Check www.cpan.org for help on doing this. Otherwise, simply restart
-Ajar and let it try to do it for you. If you are having problems, remove any
-other Perls you may have and cleanly install Strawberry Perl v5
-(www.strawberryperl.com) before contacting me.";
-				exit;
-			}
-		}
-		else {
-			print "
-Win32::Console::ANSI and Win32::Sound must be installed to play Ajar on
-Windows. Seeing as you do not have a make program, Ajar cannot do it for you.
-They are located in Ajar/source/bin/Win32 if you want to install them manually.
-Check www.cpan.org or your Perl's documentation for help on doing this.
-However, I urge you to remove whatever Perl you have installed, install
-Strawberry Perl v5 (www.strawberryperl.com), and let Ajar do it for you.";
-			exit;
-		}
+		print "Win32::Console::ANSI and Win32::Sound must be installed to play Ajar on
+Windows.";
+		exit;
 	}
 }
 
