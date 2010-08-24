@@ -1,0 +1,10 @@
+^\.
+^blib/
+^Build$
+^Build\.bat$
+^_build/
+\.tar\.gz$
+\.bak$
+^MANIFEST\.skip$
+^MYMETA\.yml$
+^ajar.pl$

@@ -1,7 +1,0 @@
-MANIFEST
-META.yml
-Makefile.PL
-README
-Sound.pm
-Sound.xs
-ppport.h
